@@ -4,8 +4,8 @@
 * [x] Order CRUD
 * [x] Inventory validation
 * [x] Dashboard API
-* [ ] React UI
-* [ ] Docker
+* [x] React UI
+* [x] Docker
 * [ ] Docker Compose
 * [ ] Render deployment
 * [ ] Vercel deployment
