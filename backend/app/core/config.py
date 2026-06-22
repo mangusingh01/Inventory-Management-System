@@ -13,6 +13,15 @@ class Settings(BaseSettings):
     db_max_overflow: int = Field(alias="DB_MAX_OVERFLOW")
     db_pool_timeout: int = Field(alias="DB_POOL_TIMEOUT")
     dashboard_low_stock_threshold: int = Field(default=5, ge=0, alias="DASHBOARD_LOW_STOCK_THRESHOLD")
+    backend_cors_origins: str = Field(default="", alias="BACKEND_CORS_ORIGINS")
+
+    @property
+    def cors_origins(self) -> list[str]:
+        return [
+            origin.strip()
+            for origin in self.backend_cors_origins.split(",")
+            if origin.strip()
+        ]
 
     model_config = SettingsConfigDict(
         env_file=".env",

@@ -6,7 +6,7 @@
 * [x] Dashboard API
 * [x] React UI
 * [x] Docker
-* [ ] Docker Compose
+* [x] Docker Compose
 * [ ] Render deployment
 * [ ] Vercel deployment
 * [ ] README
