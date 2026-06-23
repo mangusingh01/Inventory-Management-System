@@ -9,4 +9,4 @@
 * [x] Docker Compose
 * [x] Render deployment
 * [x] Vercel deployment
-* [ ] README
+* [x] README
