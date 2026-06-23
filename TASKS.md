@@ -7,6 +7,6 @@
 * [x] React UI
 * [x] Docker
 * [x] Docker Compose
-* [ ] Render deployment
-* [ ] Vercel deployment
+* [x] Render deployment
+* [x] Vercel deployment
 * [ ] README

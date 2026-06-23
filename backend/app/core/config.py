@@ -16,6 +16,13 @@ class Settings(BaseSettings):
     backend_cors_origins: str = Field(default="", alias="BACKEND_CORS_ORIGINS")
 
     @property
+    def sqlalchemy_database_url(self) -> str:
+        if self.database_url.startswith("postgresql://"):
+            return self.database_url.replace("postgresql://", "postgresql+psycopg://", 1)
+
+        return self.database_url
+
+    @property
     def cors_origins(self) -> list[str]:
         return [
             origin.strip()
